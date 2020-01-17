@@ -15,7 +15,7 @@ BearSSL::CertStore certStore;
 /* Set up values for your repository and binary names */
 #define GHOTA_USER "yknivag"
 #define GHOTA_REPO "ESP_OTA_GitHub_Showcase"
-#define GHOTA_CURRENT_TAG "0.0.0"
+#define GHOTA_CURRENT_TAG "0.1.0"
 #define GHOTA_BIN_FILE "ESP_OTA_GitHub_Showcase.ino.d1_mini.bin"
 #define GHOTA_ACCEPT_PRERELEASE 0
 
@@ -35,10 +35,12 @@ void setup() {
 	Serial.println("|                                                                              |");
 	Serial.println("|    Authur:     Gavin Smalley                                                 |");
 	Serial.println("|    Repository: https://github.com/yknivag/ESP_OTA_GitHub_Showcase/           |");
-	Serial.println("|    Version:    0.0.0                                                         |");
+	Serial.println("|    Version:    0.1.0                                                         |");
 	Serial.println("|    Date:       17th January 2020                                             |");
 	Serial.println("|                                                                              |");
 	Serial.println("================================================================================");
+	Serial.println();
+	Serial.println("CONGRATULATIONS: If you are seeing this your board has successfully updated.");
 	Serial.println();
 	Serial.println();
 	
