@@ -1,11 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <FS.h>
 
-#ifndef STASSID
-#define STASSID "ssid"
-#define STAPSK  "password"
-#endif
-
 // A single, global CertStore which can be used by all
 // connections.  Needs to stay live the entire time any of
 // the WiFiClientBearSSLs are present.
@@ -40,8 +35,6 @@ void setup() {
 	Serial.println("|                                                                              |");
 	Serial.println("================================================================================");
 	Serial.println();
-	Serial.println("CONGRATULATIONS: If you are seeing this your board has successfully updated.");
-	Serial.println();
 	Serial.println();
 	
 	// Start SPIFFS and retrieve certificates.
@@ -57,7 +50,7 @@ void setup() {
 	// Connect to WiFi
 	Serial.print("Connecting to WiFi... ");
 	WiFi.mode(WIFI_STA);
-	WiFi.begin(STASSID, STAPSK);
+	WiFi.begin();
 	if ((WiFi.status() != WL_CONNECTED)) {
 		Serial.print("... ");
 	}
